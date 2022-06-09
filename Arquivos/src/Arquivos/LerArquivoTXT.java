@@ -2,6 +2,8 @@ package Arquivos;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class LerArquivoTXT {
@@ -14,16 +16,28 @@ public class LerArquivoTXT {
 		
 		Scanner lerArquivo = new Scanner(entradaArquivo, "UTF-8");// no escaner passando a entrada do arquivo e a codificacao escolhida(utf-8)
 		
+		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		
 		while(lerArquivo.hasNext()) {// enquando tiver proximo 
 			
 			String linha = lerArquivo.nextLine();// ler proxima linha de arquivo
 			
 			if(linha!=null && !linha.isEmpty()) {
+				
+				String[] dados = linha.split("\\;");
+				
+				Pessoa pessoa = new Pessoa();
+				pessoa.setNome(dados[0]);
+				pessoa.setEmail(dados[1]);
+				pessoa.setIdade(Integer.parseInt(dados[2]));
 			
-			System.out.println(linha);// imprimir dados da linha
+			pessoas.add(pessoa);
 			}
 		}
 		
+		for (Pessoa pessoa : pessoas) {
+			System.out.println(pessoa);
+		}
 	}
 
 }

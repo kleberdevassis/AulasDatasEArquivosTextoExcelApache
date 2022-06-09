@@ -31,7 +31,7 @@ public class Arquivos {
 		pessoas.add(pessoa3);
 		
 		// criar novo endereço de arquivo
-		File arquivo = new File("C:\\Users\\vanes\\git\\repository12\\Arquivos\\src\\Arquivos\\arquivo.txt2");
+		File arquivo = new File("C:\\Users\\vanes\\git\\repository12\\Arquivos\\src\\Arquivos\\arquivo.csv");
 		
 		if(!arquivo.exists()) {// se arquivo não existir criar novo arquivo
 			arquivo.createNewFile();

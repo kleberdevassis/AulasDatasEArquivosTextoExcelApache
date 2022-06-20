@@ -37,6 +37,11 @@ public class ApachPoi {
 		pessoa3.setIdade(58);
 		pessoa3.setNome("Carlos");
 		
+		Pessoa pessoa4 = new Pessoa();
+		pessoa4.setEmail("mulher@gmail.com");
+		pessoa4.setIdade(58);
+		pessoa4.setNome("Carlos");
+		
 		List<Pessoa> pessoas = new ArrayList<Pessoa>();// criar lista e adicionar as variaveis ja com os atributos setados
 		pessoas.add(pessoa1);
 		pessoas.add(pessoa2);
